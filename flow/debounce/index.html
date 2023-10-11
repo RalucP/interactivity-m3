@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>debounce</title>
+</head>
+<style>
+  html,
+  body {
+    height: 100%;
+    background-color: #fde2e4;
+    color: #735d78;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+  body {
+    overscroll-behavior: contain;
+    touch-action: none;
+  }
+</style>
+
+<body>
+  <section>
+    <em>Try moving your pointer. Sketch won't respond until 1 second after the last event</em>
+    <div id="log"></div>
+    <script type="module" src="script.js"></script>
+  </section>
+</body>
+
+</html>

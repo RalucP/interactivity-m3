@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>polar-orbit</title>
+</head>
+<style>
+  body {
+    background-color: black;
+    overflow: hidden;
+    color: silver;
+  }
+
+  #thing {
+    width: 5em;
+    height: 5em;
+    background-color: white;
+    border-radius: 100em;
+  }
+</style>
+
+<body>
+  <div id="thing"></div>
+  <label for="rangeSpeed">Speed</label>
+  <input id="rangeSpeed" type="range" min=0 max=500 />
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>moving-average-pointer</title>
+</head>
+<style>
+  :root {
+    --hue: 83;
+    --bg: hsl(var(--hue), 50%, 13%);
+    --fg: hsl(var(--hue), 50%, 80%)
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background-color: var(--bg);
+    font-size: 12px;
+    overscroll-behavior: contain;
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  #thing {
+    background-color: var(--fg);
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    border-radius: 5em;
+    position: fixed;
+  }
+</style>
+
+<body>
+  <section>
+    <div id="thing"></div>
+    <script type="module" src="script.js"></script>
+  </section>
+</body>
+
+</html>

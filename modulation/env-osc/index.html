@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>env-osc</title>
+</head>
+
+<body>
+  <style>
+    *,
+    *:before,
+    *:after,
+    html,
+    body {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --hue: 200;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      --bg: hsl(var(--hue), 10%, 10%);
+      --fg: hsl(var(--hue), 100%, 90%);
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font);
+      user-select: none;
+      -webkit-user-select: none;
+      overscroll-behavior: none;
+      overflow: hidden;
+    }
+
+    #thing {
+      position: absolute;
+      width: 2em;
+      height: 2em;
+      border-radius: 50%;
+      left: 0;
+      top: 0;
+      background-color: var(--fg);
+      pointer-events: none;
+    }
+  </style>
+  <section>
+    <h1>env-osc</h1>
+    <p>Tap to trigger envelope.</p>
+    <p>This sketch uses an oscillator to module an envelope.</p>
+    <div id="thing"></div>
+    <script type="module" src="script.js"></script>
+  </section>
+</body>
+
+</html>

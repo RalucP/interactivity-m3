@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>point-relation</title>
+</head>
+
+<body>
+  <style>
+    :root {
+      --hue1: 33;
+      --hue2: 220;
+      --hue3: 198;
+      --radius: 5em;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      --bg: hsl(var(--hue2), 91%, 31%);
+      --fg: hsl(var(--hue1), 92%, 95%);
+    }
+
+    html, body {
+      user-select: none;
+      -webkit-user-select: none;
+      box-sizing: border-box;
+      overflow: hidden;
+      overscroll-behavior: none;
+      touch-action: none;
+      cursor: none;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--fg);
+      margin: 0;
+    }
+
+    section {
+      margin: 2em;
+    }
+
+    #thing {
+      background-color: hsl(var(--hue3), 28%, 37%);
+    }
+
+    #reference {
+      background-color: hsl(var(--hue3), 28%, 60%);
+    }
+
+    .ball {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 1em;
+      border-radius: var(--radius);
+      width: var(--radius);
+      height: var(--radius);
+    }
+
+    body.moving {
+      cursor: none;
+    }
+  </style>
+  <section>
+    <div id="info">
+      Displays relation between an initial click position and the current pointer position.
+    </div>
+
+  </section>
+  <div class="ball" id="reference"></div>
+  <div class="ball" id="thing"></div>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

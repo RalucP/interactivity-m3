@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pixels-process</title>
+</head>
+
+<body>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+  <section>
+    <h1>pixels-process</h1>
+    <p>Process each pixel of incoming frames. In this case, we remove pixels which are similar to the last frame.</p>
+    <button id="btnStart">Start camera</button>
+    <div id="lblFps"></div>
+    <div id="lblDifferences"></div>
+    <canvas id="canvas"></canvas>
+  </section>
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

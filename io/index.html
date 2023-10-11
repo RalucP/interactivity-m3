@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ixfx / input output</title>
+  <link rel="stylesheet" href="../demos.css">
+</head>
+
+<body>
+
+  <main>
+    <header>
+      <a href="../">../</a> input output
+    </header>
+    <section>
+      <p>
+        The input/output module contains functions for getting data in and out of the browser. All these sketches
+        expect some additional hardware and steps. Please browse the source files and look at the associated README
+        files.
+      </p>
+      <p>
+        <a class="pill" href=" https://clinth.github.io/ixfx/modules/Io.html">API Reference</a>
+      </p>
+      <p>
+        See also: <a href="../pointer/">pointers: touch, trackpad, mouse & stylus</a>
+      </p>
+    </section>
+    <div class="demos">
+
+      <div>
+        <h1>keyboard</h1>
+        <ul class="nobullets">
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/keyboard/key"></a>
+            <a href="./keyboard/key/">key</a>: track the state of a key
+          </li>
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/keyboard/keys"></a>
+            <a href="./keyboard/keys/">keys</a>: track the state of more than one key
+          </li>
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/keyboard/typer"></a>
+            <a href="./keyboard/typer/">typer</a>: add individual letters to the screen with key events
+          </li>
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/keyboard/cursor"></a>
+            <a href="./keyboard/cursor/">cursor</a>: move an element around with the cursor keys
+          </li>
+        </ul>
+        <h2>playgrounds</h2>
+        <ul class="nobullets">
+          <li><a href="https://clinth.github.io/ixfx-play/io/keys/index.html">keys</a>: Show key events</li>
+        </ul>
+      </div>
+      <div>
+        <h1>gamepad</h1>
+        <ul class="nobullets">
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/gamepad/button/"></a>
+            <a href="./gamepad/button/">button</a>: track the state of a key
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h1>midi</h1>
+        <ul class="nobullets">
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/midi/button/"></a>
+            <a href="./midi/button/">button</a>: work with a MIDI note as a button
+          </li>
+        </ul>
+      </div>
+            <div>
+        <h1>espruino</h1>
+        <ul class="nobullets">
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/espruino/button"></a>
+            <a href="./espruino/button/">button</a>: respond to button press (Puck.js)
+          </li>
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/espruino/led"></a>
+            <a href="./espruino/led/">led</a>: Control the three on-board LEDs (Puck.js)
+          </li>
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/espruino/led"></a>
+            <a href="./espruino/led-pwm-env/">led-pwm-env</a>: Fade an LED in and out using an envelope
+          </li>
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/espruino/accel-gyro"></a>
+            <a href="./espruino/accel-gyro/">accel-gyro</a>: use acceleration and gyroscope sensor readings (Puck.js)
+          </li>
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/espruino/temperature"></a>
+            <a href="./espruino/temperature/">temperature</a>: use temperature sensor readings (Puck.js)
+          </li>
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/espruino/analog-in"></a>
+            <a href="./espruino/analog-in/">analog input</a>: Read one or more analog inputs (Espruino Pico)
+          </li>
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/espruino/drv2605"></a>
+            <a href="./espruino/drv2605/">drv2605</a>: haptic motor controller (Espruino Pico).
+          </li>
+        </ul>
+        <h2>playgrounds</h2>
+        <ul class="nobullets">
+          <li><a href="https://clinth.github.io/ixfx-play/io/espruino-repl/index.html">espruino-repl</a>: Run lines of code on an Espruino</li>
+          <li><a href="https://clinth.github.io/ixfx-play/io/espruino-plot/index.html">espruino-plot</a>: Plot data</li>
+          <li><a href="https://clinth.github.io/ixfx-play/io/espruino-drv2605/index.html">espruino-drv2605</a>: Haptic motor</li>
+        </ul>
+      </div>
+
+      <div>
+        <h1>arduino</h1>
+        <p>These demos use Web Serial, sending JSON back and forth to an Arduino sketch.
+        <ul class="nobullets">
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/arduino/switch"></a>
+            <a href="./arduino/switch/">switch</a>: read data from a switch (or any other digital input)
+          </li>
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/arduino/joystick"></a>
+            <a href="./arduino/joystick/">joystick</a>: read data from a joystick module
+          </li>
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/arduino/led-pwm"></a>
+            <a href="./arduino/led-pwm/">led-pwm</a>: control a LED
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div>
+        <h1>etc</h1>
+        <ul class="nobullets">
+          <li>
+            <a class="source" href="https://github.com/ClintH/ixfx-demos/tree/main/io/vibration/"></a>
+            <a href="./vibration/">vibration</a>: Chrome Android vibration
+          </li>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

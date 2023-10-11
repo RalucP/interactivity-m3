@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>moving-average-audio</title>
+</head>
+<style>
+  :root {
+    --avg-colour: #FB90B7;
+    --raw-colour: #D01257;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+  html,
+  body {
+    height: 100%;
+    background-color: #0F1021;
+    color: #FFCEE4;
+    font-size: 14px;
+    font-family: var(--font);
+  }
+
+  body {
+    overscroll-behavior: contain;
+    touch-action: none;
+    overflow: hidden;
+  }
+
+  button {
+    padding: 0.5em;
+  }
+
+  #levels>div {
+    position: absolute;
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    border-radius: 5em;
+  }
+
+  #rawLevel {
+    background-color: var(--raw-colour);
+  }
+
+  #avgLevel {
+    background-color: var(--avg-colour);
+  }
+
+  .raw {
+    color: var(--raw-colour);
+  }
+
+  .avg {
+    color: var(--avg-colour);
+  }
+
+  section {
+    margin: 2em;
+  }
+</style>
+
+<body>
+  <section>
+    <p>Calculates an average sound level from the microphone.</p>
+    <button id="btnStart">Start audio</button>
+    <div class="raw">
+      Raw level: <div id="lblRawLevel"></div>
+    </div>
+    <div class="avg">
+      Average level: <div id="lblAvgLevel"></div>
+    </div>
+    <div id="levels">
+      <div id="rawLevel"></div>
+      <div id="avgLevel"></div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </section>
+</body>
+
+</html>

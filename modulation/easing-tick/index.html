@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Easing Tick</title>
+</head>
+<style>
+  :root {
+    --hue: 350;
+    --bg: hsl(var(--hue), 10%, 10%);
+    --fg: hsl(var(--hue), 50%, 90%);
+  }
+
+  html,
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    overscroll-behavior: contain;
+
+  }
+
+  body {
+    font-size: 2vw;
+  }
+
+  h1 {
+    color: var(--grayDark);
+    text-transform: uppercase;
+    margin-top: 10vh;
+  }
+
+  #thing {
+    cursor: pointer;
+    height: 6em;
+    width: 6em;
+    color: var(--bg);
+    display: inline-block;
+    border-radius: 99em;
+    background-color: hsl(var(--hue), 100%, 88%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #thing.isDone {
+    color: hsl(350, 100%, 88%);
+    background-color: hsl(350, 100%, 68%);
+  }
+</style>
+
+<body>
+  <h1>Tap circle to progress easing</h1>
+  <div id="thing"></div>
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
