@@ -75,6 +75,7 @@ const update = () => {
   let totalArea = 0;
 
   for (let i = 0; i < posesArray.length; i++) {
+
     computeWristMovement(posesArray[i]);
 
     const {minX, minY, maxX, maxY} = state.value;
@@ -87,7 +88,17 @@ const update = () => {
 
     totalArea += area;
 
+    console.log(area, i)
+
+    saveState({value: {
+      minX: 1,
+      maxX: 0,
+      minY: 1,
+      maxY: 0
+    }})
   }
+
+  console.log(totalArea)
 
   saveState({area: totalArea});
   
@@ -118,13 +129,13 @@ const findMinAndMaxValue = (x, y) => {
   const {minX, maxX, minY, maxY} = state.value;
   let maxXTemp = 0, maxYTemp = 0;
   let minXTemp = 1, minYTemp = 1;
-  if(minX >= x)
+  if(minX >= x - 0.05 )
     minXTemp = x;
-  if(minY >= y)
+  if(minY >= y - 0.05)
     minYTemp = y;
-  if(maxX <= x)
+  if(maxX <= x + 0.05)
     maxXTemp = x;
-  if(maxY <= y)
+  if(maxY <= y + 0.05)
     maxYTemp = y;
 
   saveState({value: {

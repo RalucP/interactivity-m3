@@ -62,7 +62,7 @@ export const update = (thing, ambientState) => {
   const { area } = ambientState;
   
   // Move on horizontal axis. Y remains 0
-  const vector = {x: area, y: 0};
+  let vector = {x: area, y: 0};
 
   // Compute new position, accel, velocity based on set of forces
   const withForce = Forces.apply(
